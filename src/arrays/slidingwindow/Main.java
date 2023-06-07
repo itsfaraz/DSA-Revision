@@ -1,15 +1,24 @@
 package arrays.slidingwindow;
 
+import arrays.slidingwindow.dynamic.LongestSubStringKUniqueCharacter;
+import arrays.slidingwindow.dynamic.LongestSubarraySizeK;
+import arrays.slidingwindow.dynamic.LongestSubstringNonRepeatingCharacter;
+import arrays.slidingwindow.dynamic.MinimumWindowSubstring;
 import arrays.slidingwindow.fixed.AnagramOccurrences;
 import arrays.slidingwindow.fixed.MaximumAllKSubarray;
 import arrays.slidingwindow.fixed.MaximumKSubarraySum;
 
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.PriorityQueue;
 
 public class Main {
     public static void main(String[] args) {
+
+//        -----------------------*** FIXED SIZE ***-------------------------
+
+
         MaximumKSubarraySum sum = new MaximumKSubarraySum();
         int ans1 = sum.findSumV2(new int[]{2,5,1,8,2,9,1},3);
         System.out.println("Maximum sum of size k subarray V2 : "+ans1);
@@ -39,6 +48,28 @@ public class Main {
         allKSubarray.printKAllMaximumV1(arr,k);
         allKSubarray.printKAllMaximumV2(arr,k);
         allKSubarray.printKAllMaximumV3(arr,k);
+
+//        -----------------------*** VARIABLE SIZE ***-------------------------
+//        LongestSubarraySizeK longestSubarray = new LongestSubarraySizeK();
+//        System.out.println("Longest Sub-array size : "+longestSubarray.subArrayOfSizeK(new int[]{4,1,1,1,2,3,5},5));
+
+
+//        LongestSubStringKUniqueCharacter longestSubString = new LongestSubStringKUniqueCharacter();
+//        String str = "aabacbebebe";
+//         k = 3;
+//        System.out.println("Longest SubString with K Unique Character : "+longestSubString.longestKUniqueSubString(str,k));
+
+//        LongestSubstringNonRepeatingCharacter allUniqueCharacter = new LongestSubstringNonRepeatingCharacter();
+//        int data = allUniqueCharacter.longestSubstringAllUniqueCharacter("bbbbb");
+//        System.out.println("Longest Substring with all unique character : "+data);
+
+
+        String input = "TOTMTAPTAT";
+        String windowT = "TTA";
+        MinimumWindowSubstring minimumWindow = new MinimumWindowSubstring();
+        minimumWindow.minimumSubstring(input,windowT);
+
+
 
     }
 }
