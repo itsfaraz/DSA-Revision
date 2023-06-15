@@ -1,6 +1,7 @@
 package dsa.leetcode.arrays;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,6 +16,20 @@ public class Main {
 
 //        new DuplicateZeros().duplicateZeros(new int[]{4,0,1,2,3});
 
-        new BarGraph().print(new int []{2,5,2,1,6});
+//        new BarGraph().print(new int []{2,5,2,1,6});
+
+        // -4,-2,-2,-2,0,1,2,2,2,3,3,4,4,6,6
+
+//        List<List<Integer>> result = new ThreeSum().threeSum(new int[]{-4,-2,-2,-2,0,1,2,2,2,3,3,4,4,6,6});
+//        System.out.println(result);
+
+        int []arr = { 1,0,-1,0,-2,2};
+        int target = 0;
+        List<List<Integer>> result = new FourSum().fourSumV1(arr,target);
+        System.out.println(result);
+
+        result = new FourSum().fourSumV2(arr,target);
+        System.out.println(result);
+
     }
 }
