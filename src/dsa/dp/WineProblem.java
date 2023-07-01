@@ -4,7 +4,7 @@ public class WineProblem {
 
     public static void main(String[] args) {
 
-        int []prices = {2,3,5,1,4};
+        int []prices = {1,4,3,2,5};
         int si = 0;
         int ei = prices.length-1;
         System.out.println(maxProfit(prices,si,ei,1));

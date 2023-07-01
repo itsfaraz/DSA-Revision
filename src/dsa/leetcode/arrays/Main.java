@@ -23,13 +23,22 @@ public class Main {
 //        List<List<Integer>> result = new ThreeSum().threeSum(new int[]{-4,-2,-2,-2,0,1,2,2,2,3,3,4,4,6,6});
 //        System.out.println(result);
 
-        int []arr = { 1,0,-1,0,-2,2};
-        int target = 0;
-        List<List<Integer>> result = new FourSum().fourSumV1(arr,target);
-        System.out.println(result);
+//        int []arr = { 1,0,-1,0,-2,2};
+//        int target = 0;
+//        List<List<Integer>> result = new FourSum().fourSumV1(arr,target);
+//        System.out.println(result);
+//
+//        result = new FourSum().fourSumV2(arr,target);
+//        System.out.println(result);
 
-        result = new FourSum().fourSumV2(arr,target);
-        System.out.println(result);
+        int row = 2;
+        int col = 7;
+
+
+
+
+
+
 
     }
 }
