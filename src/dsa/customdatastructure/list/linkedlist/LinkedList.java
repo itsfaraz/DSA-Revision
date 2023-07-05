@@ -1,31 +1,47 @@
 package dsa.customdatastructure.list.linkedlist;
 
+import dsa.linkedlist.KLast;
+import dsa.linkedlist.MidPoint;
+import dsa.linkedlist.ReverseKGroup;
+import dsa.linkedlist.ReverseLinkedList;
+
+import java.util.Stack;
+
 public class LinkedList {
 
 
     public static void main(String[] args) throws Exception{
        LinkedList list = new LinkedList();
-       list.addLast(10);
-       list.addLast(20);
-       list.addFirst(50);
-       list.addLast(240);
-       list.addLast(120);
-       list.addLast(100);
-       list.addLast(40);
-       list.addFirst(90);
-       System.out.println(list.isEmpty());
-       System.out.println(list);
-       System.out.println(list.getFirst());
-       System.out.println(list.getAt(0));
-       Node node = list.getNodeAt(3);
-       System.out.println(node.data);
+        list.addLast(10);
+        list.addLast(20);
+        list.addLast(30);
+        list.addLast(40);
+        list.addLast(50);
+//        list.addLast(60);
+//        list.addLast(70);
+//        list.addLast(80);
 
 
+
+//       System.out.println(list.isEmpty());
+//       System.out.println(list);
+//       System.out.println(list.getFirst());
+//       System.out.println(list.getAt(0));
+//       Node node = list.getNodeAt(3);
+//       System.out.println(node.data);
+//        System.out.println(list);
+//        list.head = new ReverseLinkedList().reverseListA2(list.head);
+//        System.out.println(list);
+//        System.out.println(new MidPoint().midPoint(list.head).data);
+//        System.out.println(new KLast().KFromLast(list.head,2));
+//        list.head = new KLast().removeKLast(list.head,2);
+//        System.out.println(list);
+        System.out.println(new ReverseKGroup().reverseKGroup(list.head,3));
     }
 
-    private class Node{
-        int data;
-        Node next;
+    public static class Node{
+        public int data;
+        public Node next;
 
         public Node(){
             this.next = null;
@@ -35,6 +51,9 @@ public class LinkedList {
     private Node head;
     private Node tail;
 
+    public Node getHead(){
+        return head;
+    }
 
     public void addFirst(int data){
         if (head == null){
@@ -63,7 +82,7 @@ public class LinkedList {
 
     @Override
     public String toString() {
-        return  displayList();
+        return displayList();
     }
 
     private String displayList(){
@@ -75,6 +94,9 @@ public class LinkedList {
             tempNode = tempNode.next;
         }
         String data = builder.toString();
+        if (data.length() == 1 || data.isEmpty()){
+            return "[]";
+        }
         return data.substring(0,data.length()-2)+"]";
     }
 
@@ -148,6 +170,8 @@ public class LinkedList {
         head = head.next;
         return data;
     }
+
+
 
 
 }
