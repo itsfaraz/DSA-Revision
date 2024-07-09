@@ -1,7 +1,7 @@
 package prep.binary_search;
 
-import binary_search.*;
-import binary_search.on_answers.KoKoEatingBanana;
+
+import prep.binary_search.on_answers.KoKoEatingBanana;
 
 public class Main {
     public static void main(String[] args) {
